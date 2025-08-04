@@ -1,0 +1,20 @@
+name: Test Cada 5 Minutos
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Cada 5 minutos
+  workflow_dispatch:  # Para poder ejecutarlo manualmente AHORA
+
+jobs:
+  mostrar-fecha:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Mostrar fecha y hora
+      run: |
+        echo "=== EJECUTÁNDOSE AHORA ==="
+        echo "Fecha y hora UTC:"
+        date
+        echo "Hora en diferentes zonas:"
+        TZ='America/Mexico_City' date
+        echo "=== FIN ==="
