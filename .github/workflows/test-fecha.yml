@@ -2,7 +2,7 @@ name: Test Cada 5 Minutos
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Cada 5 minutos
+    - cron: '20 * * * *'  # Cada hora en punto (más confiable)
   workflow_dispatch:  # Para poder ejecutarlo manualmente AHORA
 
 jobs:
