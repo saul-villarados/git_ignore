@@ -1,0 +1,14 @@
+name: Generar Número Aleatorio
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Cada minuto - AUTOMÁTICO
+
+jobs:
+  generar-numero:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Generar número aleatorio
+      run: |
+        python3 -c "import random; print(f'Número aleatorio: {random.randint(1, 1000)}')"
