@@ -3,7 +3,7 @@ name: Generar Número Aleatorio
 on:
   schedule:
     - cron: '*/1 * * * *'  # Cada minuto - AUTOMÁTICO
-  workflow_dispatch: 
+  workflow_dispatch:  # Agrega esta línea 
 jobs:
   generar-numero:
     runs-on: ubuntu-latest
